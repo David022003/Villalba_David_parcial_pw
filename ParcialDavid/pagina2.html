@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes de Deportistas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            position: relative;
+            margin: 15px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .title, .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .gallery-item:hover .title,
+        .gallery-item:hover .description {
+            opacity: 1;
+        }
+        .description {
+            display: none;
+        }
+        .gallery-item:hover .description {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galería de Imágenes de Deportistas</h1>
+        <nav>
+            <a href="index.html" class="button">Inicio</a>
+            <a href="pagina2.html" class="button">Página 2</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano.jpeg" alt="Deportista 1">
+                    <div class="title">Deportista 1</div>
+                    <div class="description">sus liderasgo en portugal 1.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano2.jpeg" alt="Deportista 2">
+                    <div class="title">Deportista 2</div>
+                    <div class="description">en su actual equipo 2.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano3.jpeg" alt="Deportista 3">
+                    <div class="title">Deportista 3</div>
+                    <div class="description">en su seleccion siendo figura 3.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano4.jpeg" alt="Deportista 4">
+                    <div class="title">Deportista 4</div>
+                    <div class="description">en su mejor momento en el real madrid 4.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano5.jpeg" alt="Deportista 5">
+                    <div class="title">Deportista 5</div>
+                    <div class="description">cuando era un soñador en grande 5.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano6.jpeg" alt="Deportista 6">
+                    <div class="title">Deportista 6</div>
+                    <div class="description">portugal 6.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano7.jpeg" alt="Deportista 7">
+                    <div class="title">Deportista 7</div>
+                    <div class="description">cuando fue presentado en su actual equipo 7.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cristiano8.jpeg" alt="Deportista 8">
+                    <div class="title">Deportista 8</div>
+                    <div class="description">siendo ya todo un ejemplo ganando todo 8.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; David Villalba - Asunción 2024</p>
+    </footer>
+</body>
+</html>

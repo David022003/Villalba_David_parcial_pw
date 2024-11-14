@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Car Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes oscilacion {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes cambioColor {
+            0% { color: #ff0000; }
+            25% { color: #00ff00; }
+            50% { color: #0000ff; }
+            75% { color: #ff00ff; }
+            100% { color: #ff0000; }
+        }
+
+        @keyframes pulsar {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .imagen {
+            animation: oscilacion 1s ease-in-out infinite;
+        }
+
+        .bienvenida {
+            animation: cambioColor 3s linear infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .bienvenida:hover {
+            transform: scale(1.1);
+            color: #ffa500;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Flexbox para el menú horizontal */
+            justify-content: center; /* Centramos los botones */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Espaciado entre botones */
+        }
+
+        .button {
+            background-color: #4CAF50; /* Color de fondo inicial */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            text-decoration: none; /* Sin subrayado */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Transición suave */
+            animation: pulsar 1.5s ease infinite; /* Añadir animación a los botones */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Color de fondo al pasar el mouse */
+            color: #ffffff; /* Color del texto al pasar el mouse */
+        }
+
+        .button:active {
+            background-color: #3e8e41; /* Color de fondo al hacer clic */
+            color: #ffd700; /* Color del texto al hacer clic */
+        }
+
+        section.descripcion {
+            margin-top: 20px;
+            text-align: center; /* Centramos el texto de la descripción */
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="bienvenida">¡a la historia y logros de Cristiano Ronaldo</h1>
+    </header>
+    
+    <main>
+        <img src="imagen/Logo.jpeg" alt="Imagen en movimiento" class="imagen" style="width: 150px; height: auto;">
+
+        <nav>
+            <ul>
+                <li><a href="pagina1.html" class="button">Página 1</a></li>
+                <li><a href="pagina2.html" class="button">Página 2</a></li>
+                <li><a href="pagina3.html" class="button">Página 3</a></li>
+                <li><a href="pagina4.html" class="button">Página 4</a></li>
+                <li><a href="pagina5.html" class="button">Página 5</a></li>
+            </ul>
+        </nav>
+        
+        <section class="descripcion">
+            <h2>Descripción de la Página</h2>
+            <p>Esta es la página principal de mi sitio web. Aquí puedes encontrar enlaces a otras secciones.</p>
+            <h3>Descripción de las páginas:</h3>
+            <ul>
+                <li><strong>Página 1:</strong> Información sobre nuestros vehículos y ofertas especiales.</li>
+                <li><strong>Página 2:</strong> Servicios y mantenimiento que ofrecemos a nuestros clientes.</li>
+                <li><strong>Página 3:</strong> Testimonios de clientes satisfechos.</li>
+                <li><strong>Página 4:</strong> Blog con noticias y novedades del sector.</li>
+                <li><strong>Página 5:</strong> Contacto y atención al cliente.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; David Villalba - Asunción 2024</p>
+    </footer>
+</body>
+</html>
+
+
+
