@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Profesional - Cristiano Ronaldo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: relative;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: white;
+            background: #3498db;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Blog Profesional de Cristiano Ronaldo</h1>
+        
+        <section id="step1">
+            <h2>Inicio en el Sporting de Lisboa</h2>
+            <img src="imagenes/cristiano9.jpeg" alt="Sporting de Lisboa">
+            <p>Cristiano Ronaldo comenzó su carrera profesional en el Sporting de Lisboa, donde se destacó como un joven prodigio del fútbol. Desde temprana edad, demostró habilidades excepcionales que le valieron la atención de clubes de renombre.</p>
+            <a href="https://www.sporting.pt/en" class="button">Leer más</a>
+        </section>
+
+        <section id="step2">
+            <h2>Transferencia al Manchester United</h2>
+            <img src="imagenes/cristiano5.jpeg" alt="Manchester United">
+            <p>En 2003, Cristiano fue transferido al Manchester United, donde se convirtió en uno de los mejores jugadores del mundo. En su tiempo en el club, ganó múltiples trofeos y elevó su perfil global.</p>
+            <a href="https://www.manutd.com" class="button">Leer más</a>
+        </section>
+
+        <section id="step3">
+            <h2>Éxitos en el Real Madrid</h2>
+            <img src="imagenes/cristiano4.jpeg" alt="Real Madrid">
+            <p>Ronaldo se unió al Real Madrid en 2009 y logró innumerables éxitos, convirtiéndose en el máximo goleador histórico del club y ganando múltiples títulos de la UEFA Champions League.</p>
+            <a href="imagenes/cristiano4.jpeg" class="button">Leer más</a>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const options = {
+                root: null,
+                threshold: 0.1,
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
